@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+}
+
+.battle-background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+} 
+
+.charmander{
+    position: relative;
+    top: 0px;
+    left: 1030px;
+}
+
+.pikachu {
+    position: relative;
+    top: 250px;
+    left: 100px;
+    width: 25%;
+    height: 25%;
+}
