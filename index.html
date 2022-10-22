@@ -21,7 +21,7 @@
         <ul>
             <li>Pikachu</li>
             <li>Lvl. 50</li>
-            <li>Health: 50/50</li>
+            <li>Health: <div id="pikachu-health">50</div>/50</li>
         </ul>
     </div>
 
@@ -29,12 +29,12 @@
         <ul>
             <li>Charmander</li>
             <li>Lvl. 50</li>
-            <li>Health: 50/50</li>
+            <li>Health: <div id="charmander-health">50</div>/50</li>
         </ul>
     </div>
 
     <div class="attack-button">
-        <button type="button">ATTACK</button>
+        <button type="button" class="attack" onclick="attackCommand('pikachu','charmander')">ATTACK</button>
     </div>
   </body>
 </html>
