@@ -24,3 +24,33 @@ h1 {
     width: 25%;
     height: 25%;
 }
+
+li {
+    list-style: none;
+}
+
+.player-info, .enemy-info {
+    position: relative;
+    background-color: white;
+    width: 500px;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.enemy-info {
+    bottom: 500px;
+    left: 500px;
+}
+
+.player-info {
+    bottom: 50px;
+    left: 900px;
+}
+
+.attack-button {
+    position: absolute;
+    left: 1325px;
+    bottom: 330px;
+}
