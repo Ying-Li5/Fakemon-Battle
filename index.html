@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pokemon Battle</title>
+    <title>Fakèmon Battle</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
   </head>
@@ -17,7 +17,7 @@
         <img src="./assests/pikachu.png" alt="character" class="pikachu">
     </div>
 
-    <div class="player-info">
+    <div class="pikachu-stats">
         <ul>
             <li>Pikachu</li>
             <li>Lvl. 50</li>
@@ -25,7 +25,7 @@
         </ul>
     </div>
 
-    <div class="enemy-info">
+    <div class="charmander-stats">
         <ul>
             <li>Charmander</li>
             <li>Lvl. 50</li>
@@ -33,8 +33,19 @@
         </ul>
     </div>
 
-    <div class="attack-button">
-        <button type="button" class="attack" onclick="attackCommand('pikachu','charmander')">ATTACK</button>
+    <div class="pikachu-attack">
+        <button type="button" class="attack" onclick="pikachuAttack('pikachu','charmander')">ATTACK</button>
+    </div>
+
+    <div class="charmander-attack">
+        <button type="button" class="attack" onclick="charmanderAttack('charmander','pikachu')">ATTACK</button>
+    </div>
+
+    <div class="scoreboard">
+        <div class="scoreboard-name-one">Pikachu</div>
+        <div class="scoreboard-name-two">Charmander</div>
+        <div class="scoreboard-score-one" id="pikachu-score">0</div>
+        <div class="scoreboard-score-two" id="charmander-score">0</div>
     </div>
   </body>
 </html>
