@@ -15,14 +15,6 @@ let pikachu = {
     }
 }
 
-//SCOREBOARD
-let pikachuScore = 0
-let charmanderScore = 0
-
-function scoreCounter() {
-
-}
-
 //PIKACHU ATTACKING 
 function pikachuAttack(attacker, defender){
     if (attacker === "pikachu"){
@@ -36,6 +28,8 @@ function pikachuAttack(attacker, defender){
         healthBar.innerText = newHealth
     } 
     if (charmander.health <= 0){
+        const newScore = document.getElementById("pikachu-score")
+        newScore.innerText = parseInt(newScore.innerText) + 1
         console.log("PIKACHU WIN!")
     }
 }
@@ -44,12 +38,16 @@ function pikachuAttack(attacker, defender){
 function charmanderAttack (attacker, defender) {
     if (attacker === "charmander"){
         console.log("in the charmander attack")
-        const newHealth = Math.round(pikachu.health -= charmander.damage())
-        pikachu.health = newHealth
+        let newHealth = Math.round(pikachu.health -= charmander.damage())
+        if(newHealth <= 0) {
+            newHealth = 0
+        }
         const healthBar = document.getElementById("pikachu-health")
         healthBar.innerText = newHealth
     }
     if (pikachu.health <= 0){
+        const newScore = document.getElementById("charmander-score")
+        newScore.innerText = parseInt(newScore.innerText) + 1
         console.log("CHARMANDER WIN!")
     }
 }

@@ -20,3 +20,5 @@ UNFINISHED FUNCTIONALITY
 
 
 BUGS
+    -not responsive when window size is manipulated (everything not in place + sizing)
+    -
