@@ -21,12 +21,11 @@ function playerTurn () {
     if (pikachuTurn) {
         const updatePlayerTurn = document.getElementById("announcement")
         updatePlayerTurn.innerText = "It's Pikachu turn!"
-    } else if (pikachuTurn == false) {
+    } else {
         const updatePlayerTurn = document.getElementById("announcement")
         updatePlayerTurn.innerText = "It's Charmander turn!"
-    }
+    } 
 }
-
 
 //PIKACHU ATTACKING 
 function pikachuAttack(attacker, defender){
@@ -45,6 +44,8 @@ function pikachuAttack(attacker, defender){
     if (charmander.health <= 0){
         const newScore = document.getElementById("pikachu-score")
         newScore.innerText = parseInt(newScore.innerText) + 1
+        const updatePlayerTurn = document.getElementById("announcement")
+        updatePlayerTurn.innerText = "PIKACHU WINS!"
         resetGame()
         console.log("PIKACHU WIN!")
     }
@@ -66,6 +67,8 @@ function charmanderAttack (attacker, defender) {
     if (pikachu.health <= 0){
         const newScore = document.getElementById("charmander-score")
         newScore.innerText = parseInt(newScore.innerText) + 1
+        const updatePlayerTurn = document.getElementById("announcement")
+        updatePlayerTurn.innerText = "CHARMANDER WINS!"
         resetGame()
         console.log("CHARMANDER WIN!")
     }
@@ -78,4 +81,3 @@ function resetGame() {
     pikachu.health = 50;
     charmander.health = 50;
 }
-
