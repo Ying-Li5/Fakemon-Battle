@@ -2,27 +2,29 @@ h1 {
     text-align: center;
 }
 
+/* SECTION */
 .battle-background {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
+    display: flex;
     margin-right: auto;
+    margin-left: auto;
     width: 75%;
+    z-index: -1;
 } 
 
+.pikachu-image-div{
+    width: 150px;
+}
+
 .charmander{
-    position: relative;
-    top: 0px;
-    left: 1030px;
+    display: flex;
+    margin-top: -470px;
+    margin-left: 1150px;
 }
 
 .pikachu {
-    position: relative;
-    top: 250px;
-    left: 100px;
-    width: 25%;
-    height: 25%;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 620px;
 }
 
 li {
@@ -30,53 +32,80 @@ li {
 }
 
 .pikachu-stats, .charmander-stats {
-    position: relative;
+    display: flex;
     background-color: white;
-    width: 500px;
-    text-align: center;
-    padding: 20px;
     border: 2px solid black;
     border-radius: 8px;
+    width: 180px;
+    height: 500px;
+    padding: 20px;
+    z-index: 1;
 }
 
 .charmander-stats {
-    bottom: 500px;
-    left: 500px;
+    margin-top: -544px;
+    margin-left: 1680px;
 }
 
 .pikachu-stats {
-    bottom: 50px;
-    left: 900px;
+    margin-top: -500px;
+    margin-left: 0px;
+}
+
+/* ASIDE AND NAV*/
+.basic-attack{
+    width: 50%;
+    height: 50%;
+}
+
+.p-attack, .c-attack {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 150px;
+    
+}
+
+.p-attack {
+    margin-left: 35px;
+}
+
+.c-attack {
+    margin-left: -30px;
 }
 
 .pikachu-attack {
     position: absolute;
-    left: 1300px;
-    bottom: 310px;
+    margin-top: -400px;
+    margin-left: 5px;
 }
 
 .charmander-attack {
     position: absolute;
-    bottom: 600px;
-    left: 600px;
+    margin-top: -400px;
+    margin-left: 1750px;
 }
 
+/* FOOTER */
 .scoreboard {
-    position: relative;
+    display: flex;
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 500px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: -7em;
+    margin-top: 120px;
 }
 
 .scoreboard-name-one {
+    color: #880808;
     font-weight: bold;
     border-bottom: 1px solid #ddd;
 }
 
 .scoreboard-name-two {
+    color: #00008B;
     font-weight: bold;
     border-bottom: 1px solid #ddd;
 }
@@ -84,6 +113,6 @@ li {
 
 .scoreboard-name-one, .scoreboard-name-two, .scoreboard-score-one, .scoreboard-score-two {
     padding: 10px;
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
 }

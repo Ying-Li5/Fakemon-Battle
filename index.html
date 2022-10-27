@@ -14,37 +14,42 @@
         <h1 id="announcement">It's Pikachu turn!</h1>
     </header>
 
-    <section>
-    <div>
-        <img src="./assests/battle-background.jpg" alt="background" class="battle-background">
-        <img src="./assests/charmander.png" alt="character" class="charmander">
-        <img src="./assests/pikachu.png" alt="character" class="pikachu">
-    </div>
+    <main>
+        <div><img src="./assests/battle-background.jpg" alt="background" class="battle-background"></div>
+        <div class="charmander-image-div"><img src="./assests/charmander.png" alt="character" class="charmander"></div>
+        <div class="pikachu-image-div"><img src="./assests/pikachu.png" alt="character" class="pikachu"></div>
+    </main>
 
-    <div class="pikachu-stats">
-        <ul>
-            <li>Pikachu</li>
-            <li>Lvl. 50</li>
-            <li>Health:<div id="pikachu-health">50</div>/50</li>
-        </ul>
-    </div>
+    <nav>
+        <div class="pikachu-stats">
+            <ul>
+                <li>Pikachu</li>
+                <li>Lvl. 50</li>
+                <li>Health:<div id="pikachu-health">50</div>/50</li>
+            </ul>
+        </div>
 
-    <div class="charmander-stats">
-        <ul>
-            <li>Charmander</li>
-            <li>Lvl. 50</li>
-            <li>Health:<div id="charmander-health">50</div>/50</li>
-        </ul>
-    </div>
+        <div class="pikachu-attack">
+            <button type="button" class="p-attack" onclick="pikachuAttack('pikachu','charmander')">
+            <img src="./assests/basic-attack.png" alt="basic-attack" class="basic-attack"></button>
+        </div>
 
-    <div class="pikachu-attack">
-        <button type="button" class="attack" onclick="pikachuAttack('pikachu','charmander')">ATTACK</button>
-    </div>
+    </nav>
 
-    <div class="charmander-attack">
-        <button type="button" class="attack" onclick="charmanderAttack('charmander','pikachu')">ATTACK</button>
-    </div>
-    </section>
+    <aside>
+        <div class="charmander-stats">
+            <ul>
+                <li>Charmander</li>
+                <li>Lvl. 50</li>
+                <li>Health:<div id="charmander-health">50</div>/50</li>
+            </ul>
+        </div>
+
+        <div class="charmander-attack">
+            <button type="button" class="c-attack" onclick="charmanderAttack('charmander','pikachu')">
+            <img src="./assests/basic-attack.png" alt="basic-attack" class="basic-attack"></button>
+        </div>
+    </aside>
 
     <footer>
     <div class="scoreboard">
@@ -53,20 +58,15 @@
         <div class="scoreboard-score-one" id="pikachu-score">0</div>
         <div class="scoreboard-score-two" id="charmander-score">0</div>
     </div>
-    </footer>
+    <!-- <div class="reset-button">
+        <button type="reset" value="reset" onclick="resetButton()" id="reset-game">RESET</button>
+    </div>
+    </footer> -->
 
   </body>
 </html>
 
 <!---
-Pikachu Skills
-Growl 
-Bite
-Charge
-Thunder Wave
-
-Charmander Skills
-Scratch
-Bite
-Ember
-Fire Spin-->
+    range, slider
+    use div as a container > allows easier controlling w/ characters
+-->
