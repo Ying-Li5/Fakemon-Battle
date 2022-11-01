@@ -2,6 +2,10 @@ h1 {
     text-align: center;
 }
 
+body {
+    width: 100%
+}
+
 /* SECTION */
 .battle-background {
     display: flex;
@@ -53,12 +57,16 @@ li {
 }
 
 /* ASIDE AND NAV*/
-.basic-attack{
+.basic-attack, .thunderbolt-ability, .volt-tackle-ability, .thunderstorm-ult, .blaze-ability, .ember-ability, .fire-blast-ult {
     width: 50%;
     height: 50%;
 }
 
-.p-attack, .c-attack {
+.p-attack:hover, .c-attack:hover, .thunderbolt:hover, .volt-tackle:hover, .thunderstorm:hover, .blaze:hover, .ember:hover, .fire-blast:hover {
+    background-color: gray;
+}
+
+.p-attack, .c-attack, .thunderbolt, .volt-tackle, .thunderstorm, .blaze, .ember, .fire-blast {
     display: flex;
     justify-content: center;
     border: 1px solid black;
@@ -67,21 +75,21 @@ li {
     
 }
 
-.p-attack {
+.p-attack, .thunderbolt, .volt-tackle, .thunderstorm {
     margin-left: 35px;
 }
 
-.c-attack {
+.c-attack, .blaze, .ember, .fire-blast{
     margin-left: -30px;
 }
 
-.pikachu-attack {
+.pikachu-skills {
     position: absolute;
     margin-top: -400px;
     margin-left: 5px;
 }
 
-.charmander-attack {
+.charmander-skills {
     position: absolute;
     margin-top: -400px;
     margin-left: 1750px;

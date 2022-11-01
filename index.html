@@ -25,13 +25,26 @@
             <ul>
                 <li>Pikachu</li>
                 <li>Lvl. 50</li>
-                <li>Health:<div id="pikachu-health">50</div>/50</li>
+                <li>Health:<div id="pikachu-health">100</div>/100</li>
             </ul>
         </div>
 
-        <div class="pikachu-attack">
+        <div class="pikachu-skills">
             <button type="button" class="p-attack" onclick="pikachuAttack('pikachu','charmander')">
-            <img src="./assests/basic-attack.png" alt="basic-attack" class="basic-attack"></button>
+            <img src="./assests/basic-attack.png" alt="basic-attack" class="basic-attack">
+            <div id="p-counter">10</div></button>
+            
+            <button type="button" class="thunderbolt" onclick="thunderboltAttack('pikachu', 'charmander')">
+            <img src="./assests/thunderbolt-ability.png" alt="thunderbolt-attack" class="thunderbolt-ability">
+            <div id="thunderbolt-counter">3</div></button>
+
+            <button type="button" class="volt-tackle" onclick="voltTackleAttack('pikachu', 'charmander')">
+            <img src="./assests/volt-tackle-ability.png" alt="volt-tackle" class="volt-tackle-ability">
+            <div id="volt-tackle-counter">2</div></button>
+
+            <button type="button" class="thunderstorm" onclick="thunderstormAttack('pikachu', 'charmander')">
+            <img src="./assests/thunderstorm-ability.png" alt="thunderstorm-attack" class="thunderstorm-ult">
+            <div id="thunderstorm-counter">1</div></button>
         </div>
 
     </nav>
@@ -41,13 +54,26 @@
             <ul>
                 <li>Charmander</li>
                 <li>Lvl. 50</li>
-                <li>Health:<div id="charmander-health">50</div>/50</li>
+                <li>Health:<div id="charmander-health">100</div>/100</li>
             </ul>
         </div>
 
-        <div class="charmander-attack">
+        <div class="charmander-skills">
             <button type="button" class="c-attack" onclick="charmanderAttack('charmander','pikachu')">
-            <img src="./assests/basic-attack.png" alt="basic-attack" class="basic-attack"></button>
+            <img src="./assests/basic-attack.png" alt="basic-attack" class="basic-attack">
+            <div id="c-counter">10</div></button>
+
+            <button type="button" class="blaze" onclick="blazeAttack('charmander','pikachu')">
+            <img src="./assests/blaze-ability.png" alt="blaze-attack" class="blaze-ability">
+            <div id="blaze-counter">3</div></button>
+
+            <button type="button" class="ember" onclick="emberAttack('charmander','pikachu')">
+            <img src="./assests/ember-ability.png" alt="ember-attack" class="ember-ability">
+            <div id="ember-counter">2</div></button>
+
+            <button type="button" class="fire-blast" onclick="fireBlastAttack('charmander','pikachu')">
+            <img src="./assests/fire-blast-ability.png" alt="fire-blast" class="fire-blast-ult">
+            <div id="fire-blast-counter">1</div></button>
         </div>
     </aside>
 
@@ -58,10 +84,11 @@
         <div class="scoreboard-score-one" id="pikachu-score">0</div>
         <div class="scoreboard-score-two" id="charmander-score">0</div>
     </div>
-    <!-- <div class="reset-button">
+    
+    <div class="reset-button">
         <button type="reset" value="reset" onclick="resetButton()" id="reset-game">RESET</button>
     </div>
-    </footer> -->
+    </footer>
 
   </body>
 </html>
