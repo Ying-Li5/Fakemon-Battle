@@ -91,7 +91,6 @@ function decreaseAbility(nameOfField){
 }
 
 function calculateAttack(nameOfAttack){
-    //Make this a big if - else if to check all of the attacks
     if (nameOfAttack === "basic-pikachu") {
         return Math.round((Math.random() * 10))
     } else if (nameOfAttack === "thunderbolt") {
@@ -112,7 +111,7 @@ function calculateAttack(nameOfAttack){
 }
 
 //RESETTING GAME AFTER SCORING
-function resetGame() { //Good to go
+function resetGame() {
     //PIKACHU
     document.getElementById("pikachu-health").innerText = 100;
     document.getElementById("p-counter").innerText = 10;

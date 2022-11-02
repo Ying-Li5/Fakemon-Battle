@@ -19,38 +19,50 @@ h1 {
     display: flex;
     margin-top: -470px;
     margin-left: 1150px;
+    object-fit: cover;
 }
 
 .pikachu {
     display: flex;
     margin-top: 20px;
     margin-left: 620px;
+    
 }
 
 li {
     list-style: none;
 }
 
-.pikachu-stats, .charmander-stats {
-    display: flex;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 8px;
-    width: 150px;
-    height: 500px;
-    padding: 20px;
-    z-index: 1;
+/* NAV */
+.pikachu-box {
+    display: grid;
+    border: 1px solid black;
+    width: 10%;
+    justify-content: center;
+    margin-top: -25%;
+    margin-left: 1%;
+    padding-bottom: 1%;
 }
 
-.charmander-stats {
-    margin-top: -544px;
-    margin-left: 1700px;
+.p-attack:hover, .thunderbolt:hover, .volt-tackle:hover, .thunderstorm:hover {
+    background-color: 	#D3D3D3;
 }
 
-.pikachu-stats {
-    margin-top: -500px;
-    margin-left: 0px;
+/* ASIDE */
+.charmander-box {
+    display: grid;
+    border: 1px solid black;
+    width: 10%;
+    justify-content: center;
+    margin-top: -32.5%;
+    margin-left: 88%;
+    padding-bottom: 1%;
 }
+
+.c-attack:hover, .blaze:hover, .ember:hover, .fire-blast:hover {
+    background-color: 	#D3D3D3;
+}
+
 
 /* ASIDE AND NAV*/
 .basic-attack, .thunderbolt-ability, .volt-tackle-ability, .thunderstorm-ult, .blaze-ability, .ember-ability, .fire-blast-ult {
@@ -58,48 +70,15 @@ li {
     height: 50%;
 }
 
-.p-attack:hover, .c-attack:hover, .thunderbolt:hover, .volt-tackle:hover, .thunderstorm:hover, .blaze:hover, .ember:hover, .fire-blast:hover {
-    background-color: gray;
-}
-
-.p-attack, .c-attack, .thunderbolt, .volt-tackle, .thunderstorm, .blaze, .ember, .fire-blast {
-    display: flex;
-    justify-content: center;
-    border: 1px solid black;
-    border-radius: 12px;
-    width: 150px;
-    
-}
-
-.p-attack, .thunderbolt, .volt-tackle, .thunderstorm {
-    margin-left: 20px;
-}
-
-.c-attack, .blaze, .ember, .fire-blast{
-    margin-left: -30px;
-}
-
-.pikachu-skills {
-    position: absolute;
-    margin-top: -400px;
-    margin-left: 0px;
-}
-
-.charmander-skills {
-    position: absolute;
-    margin-top: -400px;
-    margin-left: 1750px;
-}
-
 /* FOOTER */
 .scoreboard {
     display: flex;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 500px;
+    width: 50%;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 120px;
+    margin-top: 2%;
 }
 
 .scoreboard-name-one {
@@ -116,7 +95,7 @@ li {
 
 
 .scoreboard-name-one, .scoreboard-name-two, .scoreboard-score-one, .scoreboard-score-two {
-    padding: 10px;
-    font-size: 30px;
+    padding: 1%;
+    font-size: 150%;
     text-align: center;
 }
