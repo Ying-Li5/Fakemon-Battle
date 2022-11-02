@@ -7,19 +7,19 @@ Growing up, I spent a lot of time playing Pokèmon on my DS (particularly HeartG
 Nintendo is currently remastering some of their Pokèmon game which is pretty nostaglic for me --> which brought me over to this.... Fakèmon (to avoid any copyright lol)
 
 # How to Play
-Just to clarify, this is PVP game between Pikachu (PLAYER 1) and Charmander (PLAYER 2)
+Just to clarify, this is PVP game between **Pikachu** (PLAYER 1) and **Charmander** (PLAYER 2)
 There are four abilities for each characters
 * Basic attack
 * 2 Speciality attacks
 * 1 ultimate attack
 
-Pikachu attacks:
+**Pikachu attacks:**
 * Basic attack (10)
 * Thunderbolt (3)
 * Volt tackle (2)
 * Thunderstorm (1)
 
-Charmander attacks:
+**Charmander attacks:**
 * Basic attack (10)
 * Blaze (3)
 * Ember (2)
