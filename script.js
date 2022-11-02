@@ -78,10 +78,9 @@ function charmanderAttack (fieldName, attacker, attackName) {
         }
 }
 
+//DECREASING ABILIIY AMT
 function decreaseAbility(nameOfField){
-    console.log(nameOfField)
     const attackField = document.getElementById(nameOfField)
-    console.log(attackField)
     if(parseInt(attackField.innerText) > 0) {
         attackField.innerText = parseInt(attackField.innerText) - 1
         return true
@@ -90,6 +89,7 @@ function decreaseAbility(nameOfField){
     }
 }
 
+//CHECKING TO SEE WHICH BUTTON IS CLICKED
 function calculateAttack(nameOfAttack){
     if (nameOfAttack === "basic-pikachu") {
         return Math.round((Math.random() * 10))
@@ -130,7 +130,6 @@ function resetGame() {
 }
 
 //RESET SCOREBOARD
-function resetButton() {
-    document.getElementById("scoreboard-score") = 0;
-
-}
+// function resetButton() {
+//     document.getElementById("scoreboard-score") = 0;
+// }

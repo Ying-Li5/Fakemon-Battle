@@ -42,7 +42,8 @@ Characters images are from
 * https://www.vecteezy.com/vector-art/141925-set-of-pokemon-icons
 
 # Unfinished Functionality
-Did not get to finish the reset button which clears the scoreboard 
+Did not get to finish the reset button which clears the scoreboard
+Did not add health silders
 
 # Bugs
 Currently, page is non-responsive on mobile app or when not played on full screen. 

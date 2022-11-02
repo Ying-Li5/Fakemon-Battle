@@ -1,3 +1,7 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 h1 {
     text-align: center;
 }
@@ -34,6 +38,10 @@ li {
 }
 
 /* NAV */
+.p-name {
+    color: #880808;
+}
+
 .pikachu-box {
     display: grid;
     border: 1px solid black;
@@ -44,25 +52,38 @@ li {
     padding-bottom: 1%;
 }
 
+.p-attack, .thunderbolt, .volt-tackle, .thunderstorm {
+    background-color: white;
+    border: none;
+}
+
 .p-attack:hover, .thunderbolt:hover, .volt-tackle:hover, .thunderstorm:hover {
-    background-color: 	#D3D3D3;
+    background-color: #D3D3D3;
 }
 
 /* ASIDE */
+.c-name {
+    color: #00008B;
+}
+
 .charmander-box {
     display: grid;
     border: 1px solid black;
     width: 10%;
     justify-content: center;
     margin-top: -32.5%;
-    margin-left: 88%;
+    margin-left: 89%;
     padding-bottom: 1%;
 }
 
-.c-attack:hover, .blaze:hover, .ember:hover, .fire-blast:hover {
-    background-color: 	#D3D3D3;
+.c-attack, .blaze, .ember, .fire-blast {
+    background-color: white;
+    border: none;
 }
 
+.c-attack:hover, .blaze:hover, .ember:hover, .fire-blast:hover {
+    background-color: #D3D3D3;
+}
 
 /* ASIDE AND NAV*/
 .basic-attack, .thunderbolt-ability, .volt-tackle-ability, .thunderstorm-ult, .blaze-ability, .ember-ability, .fire-blast-ult {
