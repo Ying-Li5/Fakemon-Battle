@@ -14,16 +14,16 @@ There are four abilities for each characters
 * 1 ultimate attack
 
 Pikachu attacks:
-* basic attack (10)
-* thunderbolt (3)
-* volt tackle (2)
-* thunderstorm (1)
+* Basic attack (10)
+* Thunderbolt (3)
+* Volt tackle (2)
+* Thunderstorm (1)
 
 Charmander attacks:
-* basic attack (10)
-* blaze (3)
-* ember (2)
-* fire blast (1)
+* Basic attack (10)
+* Blaze (3)
+* Ember (2)
+* Fire blast (1)
 
 Each skills/attacks damages are randomly generated
 
@@ -39,7 +39,7 @@ Skills pictures are from
 * https://game8.co/games/Pokemon-UNITE/archives/379178
 
 Characters images are from
-* *https://www.vecteezy.com/vector-art/141925-set-of-pokemon-icons
+* https://www.vecteezy.com/vector-art/141925-set-of-pokemon-icons
 
 # Unfinished Functionality
 Did not get to finish the reset button which clears the scoreboard 
@@ -47,6 +47,6 @@ Did not get to finish the reset button which clears the scoreboard
 # Bugs
 Currently, page is non-responsive on mobile app or when not played on full screen. 
 Listed below are items that will be out of positioning if page are not optimized
-* characters
-* skills
-* scoreboard
+* Characters
+* Skills
+* Scoreboard
