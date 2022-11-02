@@ -9,21 +9,21 @@ Nintendo is currently remastering some of their Pokèmon game which is pretty no
 # How to Play
 Just to clarify, this is PVP game between Pikachu (PLAYER 1) and Charmander (PLAYER 2)
 There are four abilities for each characters
-    - Basic attack
-    - 2 Speciality attacks
-    - 1 ultimate attack
+* Basic attack
+* 2 Speciality attacks
+* 1 ultimate attack
 
 Pikachu attacks:
-    - basic attack (10)
-    - thunderbolt (3)
-    - volt tackle (2)
-    - thunderstorm (1)
+* basic attack (10)
+* thunderbolt (3)
+* volt tackle (2)
+* thunderstorm (1)
 
 Charmander attacks:
-    - basic attack (10)
-    - blaze (3)
-    - ember (2)
-    - fire blast (1)
+* basic attack (10)
+* blaze (3)
+* ember (2)
+* fire blast (1)
 
 Each skills/attacks damages are randomly generated
 
@@ -35,17 +35,18 @@ If Charmander wins, Pikachu loses.
 A lot of google searches!!!
 
 Skills pictures are from
-    - https://game8.co/games/Pokemon-UNITE/archives/338028
-    - https://game8.co/games/Pokemon-UNITE/archives/379178
+* https://game8.co/games/Pokemon-UNITE/archives/338028
+* https://game8.co/games/Pokemon-UNITE/archives/379178
 
 Characters images are from
-    - https://www.vecteezy.com/vector-art/141925-set-of-pokemon-icons
+* *https://www.vecteezy.com/vector-art/141925-set-of-pokemon-icons
 
 # Unfinished Functionality
 Did not get to finish the reset button which clears the scoreboard 
 
 # Bugs
-Currently, page is non-responsive on mobile app or when not played on full screen. Listed below are items that will be out of positioning if page are not optimized
-    - characters
-    - skills
-    - scoreboard
+Currently, page is non-responsive on mobile app or when not played on full screen. 
+Listed below are items that will be out of positioning if page are not optimized
+* characters
+* skills
+* scoreboard
