@@ -2,10 +2,6 @@ h1 {
     text-align: center;
 }
 
-body {
-    width: 100%
-}
-
 /* SECTION */
 .battle-background {
     display: flex;
@@ -40,7 +36,7 @@ li {
     background-color: white;
     border: 2px solid black;
     border-radius: 8px;
-    width: 180px;
+    width: 150px;
     height: 500px;
     padding: 20px;
     z-index: 1;
@@ -48,7 +44,7 @@ li {
 
 .charmander-stats {
     margin-top: -544px;
-    margin-left: 1680px;
+    margin-left: 1700px;
 }
 
 .pikachu-stats {
@@ -76,7 +72,7 @@ li {
 }
 
 .p-attack, .thunderbolt, .volt-tackle, .thunderstorm {
-    margin-left: 35px;
+    margin-left: 20px;
 }
 
 .c-attack, .blaze, .ember, .fire-blast{
@@ -86,7 +82,7 @@ li {
 .pikachu-skills {
     position: absolute;
     margin-top: -400px;
-    margin-left: 5px;
+    margin-left: 0px;
 }
 
 .charmander-skills {

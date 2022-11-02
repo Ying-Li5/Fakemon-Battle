@@ -23,26 +23,26 @@
     <nav>
         <div class="pikachu-stats">
             <ul>
-                <li>Pikachu</li>
+                <li><h3>Pikachu</h3></li>
                 <li>Lvl. 50</li>
                 <li>Health:<div id="pikachu-health">100</div>/100</li>
             </ul>
         </div>
 
         <div class="pikachu-skills">
-            <button type="button" class="p-attack" onclick="pikachuAttack('pikachu','charmander')">
+            <button type="button" class="p-attack" value="p-counter" onclick="pikachuAttack('p-counter', 'pikachu', 'basic-pikachu')">
             <img src="./assests/basic-attack.png" alt="basic-attack" class="basic-attack">
             <div id="p-counter">10</div></button>
             
-            <button type="button" class="thunderbolt" onclick="thunderboltAttack('pikachu', 'charmander')">
+            <button type="button" class="thunderbolt" value="thunderbolt-counter" onclick="pikachuAttack('thunderbolt-counter', 'pikachu', 'thunderbolt')">
             <img src="./assests/thunderbolt-ability.png" alt="thunderbolt-attack" class="thunderbolt-ability">
             <div id="thunderbolt-counter">3</div></button>
 
-            <button type="button" class="volt-tackle" onclick="voltTackleAttack('pikachu', 'charmander')">
+            <button type="button" class="volt-tackle" value="volt-tackle-counter" onclick="pikachuAttack('volt-tackle-counter', 'pikachu', 'volt-tackle')">
             <img src="./assests/volt-tackle-ability.png" alt="volt-tackle" class="volt-tackle-ability">
             <div id="volt-tackle-counter">2</div></button>
 
-            <button type="button" class="thunderstorm" onclick="thunderstormAttack('pikachu', 'charmander')">
+            <button type="button" class="thunderstorm" value="thunderstorm-counter" onclick="pikachuAttack('thunderstorm-counter', 'pikachu', 'thunderstorm')">
             <img src="./assests/thunderstorm-ability.png" alt="thunderstorm-attack" class="thunderstorm-ult">
             <div id="thunderstorm-counter">1</div></button>
         </div>
@@ -52,26 +52,26 @@
     <aside>
         <div class="charmander-stats">
             <ul>
-                <li>Charmander</li>
+                <li><h3>Charmander</h3></li>
                 <li>Lvl. 50</li>
                 <li>Health:<div id="charmander-health">100</div>/100</li>
             </ul>
         </div>
 
         <div class="charmander-skills">
-            <button type="button" class="c-attack" onclick="charmanderAttack('charmander','pikachu')">
+            <button type="button" class="c-attack" value="c-counter" onclick="charmanderAttack('c-counter', 'charmander','basic-charmander')">
             <img src="./assests/basic-attack.png" alt="basic-attack" class="basic-attack">
             <div id="c-counter">10</div></button>
 
-            <button type="button" class="blaze" onclick="blazeAttack('charmander','pikachu')">
+            <button type="button" class="blaze" value="blaze-counter" onclick="charmanderAttack('blaze-counter', 'charmander','blaze')">
             <img src="./assests/blaze-ability.png" alt="blaze-attack" class="blaze-ability">
             <div id="blaze-counter">3</div></button>
 
-            <button type="button" class="ember" onclick="emberAttack('charmander','pikachu')">
+            <button type="button" class="ember" value="ember-counter" onclick="charmanderAttack('ember-counter', 'charmander','ember')">
             <img src="./assests/ember-ability.png" alt="ember-attack" class="ember-ability">
             <div id="ember-counter">2</div></button>
 
-            <button type="button" class="fire-blast" onclick="fireBlastAttack('charmander','pikachu')">
+            <button type="button" class="fire-blast" value="fire-blast-counter" onclick="charmanderAttack('fire-blast-counter', 'charmander','fire-blast')">
             <img src="./assests/fire-blast-ability.png" alt="fire-blast" class="fire-blast-ult">
             <div id="fire-blast-counter">1</div></button>
         </div>
@@ -85,10 +85,10 @@
         <div class="scoreboard-score-two" id="charmander-score">0</div>
     </div>
     
-    <div class="reset-button">
+    <!-- <div class="reset-button">
         <button type="reset" value="reset" onclick="resetButton()" id="reset-game">RESET</button>
     </div>
-    </footer>
+    </footer> -->
 
   </body>
 </html>

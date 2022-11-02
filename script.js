@@ -2,36 +2,11 @@
 let charmander = {
     name: "charmander",
     health: 100,
-    basicDamage () {
-        return Math.round((Math.random() * 10))
-    },
-    blazeDamage () {
-        return Math.round((Math.random() * 10)) //change damage
-    },
-    emberDamage () {
-        return Math.round((Math.random() * 10)) //change damage
-    },
-    fireBlastDamage () {
-        return Math.round((Math.random() * 10)) //change damage
-    },
 }
 
 let pikachu = {
     name: "pikachu",
     health: 100,
-    basicDamage () {
-        return Math.round((Math.random() * 10))
-    },
-    thunderboltDamage () {
-        return Math.round((Math.random() * 10)) //change damage
-    },
-    voltTackleDamage () {
-        return Math.round((Math.random() * 10)) //change damage
-    },
-    thunderstormDamage () {
-        return Math.round((Math.random() * 10)) //change damage
-    },
-
 }
 
 //ANNOUNCEMENTS
@@ -47,15 +22,14 @@ function playerTurn () {
 }
 
 //PIKACHU ATTACKING 
-function pikachuAttack(attacker, defender){
+function pikachuAttack(fieldName, attacker, attackName){
     if (attacker === "pikachu"){
-        console.log("in the pikachu attack")
         if (pikachuTurn){
-            const attackCheck = decreasePikachuAttacks() 
+            const attackCheck = decreaseAbility(fieldName) 
             if (attackCheck === true){
-                let newHealth = Math.round(charmander.health -= pikachu.basicDamage())
+                let newHealth = Math.round(charmander.health -= calculateAttack(attackName))
                 if (newHealth <= 0) {
-                        newHealth = 0
+                    newHealth = 0
                 }
                 charmander.health = newHealth
                 const healthBar = document.getElementById("charmander-health")
@@ -73,107 +47,16 @@ function pikachuAttack(attacker, defender){
                 console.log("PIKACHU WIN!")
             }
         }
-    }
-        
-}
-
-//PIKACHU SKILLS
-function thunderboltAttack(attacker, defender) {
-    if (attacker === "pikachu"){
-        console.log("in the pikachu attack")
-        if (pikachuTurn){
-            const attackCheck = decreaseThunderbolt() 
-            if (attackCheck === true) {
-                let newHealth = Math.round(charmander.health -= pikachu.thunderboltDamage())
-            if (newHealth <= 0) {
-                newHealth = 0 
-            }
-            charmander.health = newHealth
-            const healthBar = document.getElementById("charmander-health")
-            healthBar.innerText = newHealth
-            pikachuTurn = false;
-            playerTurn()
-            decreaseThunderbolt()
-        }
-    } 
-        //CHECKING CHARMANDER HEALTH
-        if (charmander.health <= 0){
-            const newScore = document.getElementById("pikachu-score")
-            newScore.innerText = parseInt(newScore.innerText) + 1
-            const updatePlayerTurn = document.getElementById("announcement")
-            updatePlayerTurn.innerText = "PIKACHU WINS!"
-            resetGame()
-            console.log("PIKACHU WIN!")
-        }
-            }
-}
-
-function voltTackleAttack(attacker, defender) {
-    if (attacker === "pikachu"){
-        console.log("in the pikachu attack")
-        if (pikachuTurn){
-            const attackCheck = decreaseVoltTackle()
-            if (attackCheck === true) {
-                let newHealth = Math.round(charmander.health -= pikachu.voltTackleDamage())
-                if (newHealth <= 0) {
-                    newHealth = 0 
-                }
-                charmander.health = newHealth
-                const healthBar = document.getElementById("charmander-health")
-                healthBar.innerText = newHealth
-                pikachuTurn = false;
-                playerTurn()
-            }
-        } 
-            //CHECKING CHARMANDER HEALTH
-            if (charmander.health <= 0){
-                const newScore = document.getElementById("pikachu-score")
-                newScore.innerText = parseInt(newScore.innerText) + 1
-                const updatePlayerTurn = document.getElementById("announcement")
-                updatePlayerTurn.innerText = "PIKACHU WINS!"
-                resetGame()
-                console.log("PIKACHU WIN!")
-            }
-            }
-}
-
-function thunderstormAttack(attacker, defender) {
-    if (attacker === "pikachu"){
-        console.log("in the pikachu attack")
-        if (pikachuTurn){
-            const attackCheck = decreaseThunderstorm()
-            if (attackCheck === true) {
-                let newHealth = Math.round(charmander.health -= pikachu.thunderstormDamage())
-                if (newHealth <= 0) {
-                    newHealth = 0 
-                }
-                charmander.health = newHealth
-                const healthBar = document.getElementById("charmander-health")
-                healthBar.innerText = newHealth
-                pikachuTurn = false;
-                playerTurn()
-            }
-        } 
-        //CHECKING CHARMANDER HEALTH
-        if (charmander.health <= 0){
-            const newScore = document.getElementById("pikachu-score")
-            newScore.innerText = parseInt(newScore.innerText) + 1
-            const updatePlayerTurn = document.getElementById("announcement")
-            updatePlayerTurn.innerText = "PIKACHU WINS!"
-            resetGame()
-            console.log("PIKACHU WIN!")
-        } 
-            }
+    }      
 }
 
 //CHARMANDER ATTACKING
-function charmanderAttack (attacker, defender) {
+function charmanderAttack (fieldName, attacker, attackName) {
     if (attacker === "charmander"){
-        console.log("in the charmander attack")
         if (pikachuTurn === false) {
-            const attackCheck = decreaseCharmanderAttacks()
+            const attackCheck = decreaseAbility(fieldName)
             if (attackCheck === true) {
-                let newHealth = Math.round(pikachu.health -= charmander.basicDamage())
+                let newHealth = Math.round(pikachu.health -= calculateAttack(attackName))
                 if(newHealth <= 0) {
                     newHealth = 0
                 }
@@ -192,179 +75,44 @@ function charmanderAttack (attacker, defender) {
                 resetGame()
                 console.log("CHARMANDER WIN!")
             }
-            }
-}
-
-    //CHARMANDER SKILLS
-function blazeAttack (attacker, defender) {
-    if (attacker === "charmander"){
-        console.log("in the charmander attack")
-        if (pikachuTurn === false) {
-            const attackCheck = decreaseBlaze()
-            if (attackCheck === true) {
-                let newHealth = Math.round(pikachu.health -= charmander.blazeDamage())
-                if(newHealth <= 0) {
-                    newHealth = 0
-                }
-                const healthBar = document.getElementById("pikachu-health")
-                healthBar.innerText = newHealth
-                pikachuTurn = true;
-                playerTurn()
-            }
         }
-            //CHECKING PIKACHU HEALTH
-            if (pikachu.health <= 0){
-                const newScore = document.getElementById("charmander-score")
-                newScore.innerText = parseInt(newScore.innerText) + 1
-                const updatePlayerTurn = document.getElementById("announcement")
-                updatePlayerTurn.innerText = "CHARMANDER WINS!"
-                resetGame()
-                console.log("CHARMANDER WIN!")
-            }
-            }
 }
 
-function emberAttack (attacker, defender) {
-    if (attacker === "charmander"){
-        console.log("in the charmander attack")
-        if (pikachuTurn === false) {
-            const attackCheck = decreaseEmber()
-            if (attackCheck === true) {
-                let newHealth = Math.round(pikachu.health -= charmander.emberDamage())
-                if(newHealth <= 0) {
-                    newHealth = 0
-                }
-                const healthBar = document.getElementById("pikachu-health")
-                healthBar.innerText = newHealth
-                pikachuTurn = true;
-                playerTurn()
-            }
-        }
-            //CHECKING PIKACHU HEALTH
-            if (pikachu.health <= 0){
-                const newScore = document.getElementById("charmander-score")
-                newScore.innerText = parseInt(newScore.innerText) + 1
-                const updatePlayerTurn = document.getElementById("announcement")
-                updatePlayerTurn.innerText = "CHARMANDER WINS!"
-                resetGame()
-                console.log("CHARMANDER WIN!")
-            }
-            }
-}
-
-function fireBlastAttack (attacker, defender) {
-    if (attacker === "charmander"){
-        console.log("in the charmander attack")
-        if (pikachuTurn === false) {
-            const attackCheck = decreaseFireBlast()
-            if (attackCheck === true) {
-                let newHealth = Math.round(pikachu.health -= charmander.fireBlastDamage())
-                if(newHealth <= 0) {
-                    newHealth = 0
-                }
-                const healthBar = document.getElementById("pikachu-health")
-                healthBar.innerText = newHealth
-                pikachuTurn = true;
-                playerTurn()
-            }
-        }
-    
-        //CHECKING PIKACHU HEALTH
-        if (pikachu.health <= 0){
-            const newScore = document.getElementById("charmander-score")
-            newScore.innerText = parseInt(newScore.innerText) + 1
-            const updatePlayerTurn = document.getElementById("announcement")
-            updatePlayerTurn.innerText = "CHARMANDER WINS!"
-            resetGame()
-            console.log("CHARMANDER WIN!")
-        }
-            }
-}
-
-//DECREASE PIKACHU'S ATTACKS
-function decreasePikachuAttacks() {
-    const pCounter = document.getElementById("p-counter")
-    if(parseInt(pCounter.innerText)> 0) {
-        pCounter.innerText = parseInt(pCounter.innerText) - 1
+function decreaseAbility(nameOfField){
+    console.log(nameOfField)
+    const attackField = document.getElementById(nameOfField)
+    console.log(attackField)
+    if(parseInt(attackField.innerText) > 0) {
+        attackField.innerText = parseInt(attackField.innerText) - 1
         return true
     } else {
         return false
     }
 }
 
-function decreaseThunderbolt() {
-    const thunderboltCounter = document.getElementById("thunderbolt-counter")
-    if(parseInt(thunderboltCounter.innerText) > 0) {
-        thunderboltCounter.innerText = parseInt(thunderboltCounter.innerText) - 1
-        return true
-    } else {
-        return false
-    }
-}
-
-function decreaseVoltTackle() {
-    const voltTackleCounter = document.getElementById("volt-tackle-counter")
-    if(parseInt(voltTackleCounter.innerText) > 0) {
-        voltTackleCounter.innerText = parseInt(voltTackleCounter.innerText) - 1
-        return true
-    } else {
-        return false
-    }
-}
-
-function decreaseThunderstorm() {
-    const thunderstormCounter = document.getElementById("thunderstorm-counter")
-    if(parseInt(thunderstormCounter.innerText) > 0) {
-        thunderstormCounter.innerText = parseInt(thunderstormCounter.innerText) - 1
-        return true
-    } else {
-        return false
-    }
-}
-
-//DECREASE CHARMANDER'S ATTACKS
-function decreaseCharmanderAttacks() {
-    const cCounter = document.getElementById("c-counter")
-    if(parseInt(cCounter.innerText) > 0) {
-        cCounter.innerText = parseInt(cCounter.innerText) - 1
-        return true
-    } else {
-        return false
-    }
-}
-
-function decreaseBlaze() {
-    const blazeCounter = document.getElementById("blaze-counter")
-    if(parseInt(blazeCounter.innerText) > 0) {
-        blazeCounter.innerText = parseInt(blazeCounter.innerText) - 1
-        return true
-    } else {
-        return false
-    }
-}
-
-function decreaseEmber() {
-    const emberCounter = document.getElementById("ember-counter")
-    if(parseInt(emberCounter.innerText) > 0) {
-        emberCounter.innerText = parseInt(emberCounter.innerText) - 1
-        return true
-    } else {
-        return false
-    }
-}
-
-function decreaseFireBlast() {
-    const fireBlastCounter = document.getElementById("fire-blast-counter")
-    if(parseInt(fireBlastCounter.innerText) > 0) {
-        fireBlastCounter.innerText = parseInt(fireBlastCounter.innerText) - 1
-        return true
-    } else {
-        return false
+function calculateAttack(nameOfAttack){
+    //Make this a big if - else if to check all of the attacks
+    if (nameOfAttack === "basic-pikachu") {
+        return Math.round((Math.random() * 10))
+    } else if (nameOfAttack === "thunderbolt") {
+        return Math.round((Math.random() * 20))
+    } else if (nameOfAttack === "volt-tackle") {
+        return Math.round((Math.random() * 40))
+    } else if (nameOfAttack === "thunderstorm") {
+        return Math.round((Math.random() * 60))
+    } else if (nameOfAttack === "basic-charmander") {
+        return Math.round((Math.random() * 10))
+    } else if (nameOfAttack === "blaze") {
+        return Math.round((Math.random() * 20))
+    } else if (nameOfAttack === "ember") {
+        return Math.round((Math.random() * 40))
+    } else if (nameOfAttack === "fire-blast") {
+        return Math.round((Math.random() * 60))
     }
 }
 
 //RESETTING GAME AFTER SCORING
-function resetGame() {
+function resetGame() { //Good to go
     //PIKACHU
     document.getElementById("pikachu-health").innerText = 100;
     document.getElementById("p-counter").innerText = 10;
