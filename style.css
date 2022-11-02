@@ -35,6 +35,7 @@ h1 {
 
 li {
     list-style: none;
+
 }
 
 /* NAV */
@@ -93,7 +94,6 @@ li {
 
 /* FOOTER */
 .scoreboard {
-    display: flex;
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 50%;
