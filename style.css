@@ -54,6 +54,8 @@ li {
 }
 
 .p-attack, .thunderbolt, .volt-tackle, .thunderstorm {
+    display: flex;
+    justify-content: center;
     background-color: white;
     border: none;
 }
@@ -72,12 +74,14 @@ li {
     border: 1px solid black;
     width: 10%;
     justify-content: center;
-    margin-top: -32.5%;
+    margin-top: -28%;
     margin-left: 89%;
     padding-bottom: 1%;
 }
 
 .c-attack, .blaze, .ember, .fire-blast {
+    display: flex;
+    justify-content: center;
     background-color: white;
     border: none;
 }
@@ -93,13 +97,16 @@ li {
 }
 
 /* FOOTER */
+
 .scoreboard {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 50%;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 2%;
+    margin-top: 5%;
+    border: 1px solid #ddd;
+    padding: 5px;
 }
 
 .scoreboard-name-one {
@@ -119,4 +126,10 @@ li {
     padding: 1%;
     font-size: 150%;
     text-align: center;
+}
+
+.reset-button {
+    display: flex;
+    margin-top: -4%;
+    margin-left: 71%;
 }
