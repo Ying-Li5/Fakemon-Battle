@@ -1,23 +1,51 @@
 # Fakèmon-Battle
+Fakèmon Battle was created for my milestone projects for people to see my skills and knowledge built during Part 1 of my Bootcamp studies
 
-INSPIRATION 
-    Growing up, I spent alot on time playing Pokèmon on my DS (particularly HeartGold/SoulSilver)
-    Yeah... so here's Fakèmon lol.
+# Inspiration
+Growing up, I spent a lot of time playing Pokèmon on my DS (particularly HeartGold/SoulSilver) so I wanted to create something similar to the game.
 
-HOW TO PLAY: 
+Nintendo is currently remastering some of their Pokèmon game which is pretty nostaglic for me --> which brought me over to this.... Fakèmon (to avoid any copyright lol)
 
-This is a PVP game where:
-Player One gets to be Pikachu
-Player Two gets to be Charmander
+# How to Play
+Just to clarify, this is PVP game between Pikachu (PLAYER 1) and Charmander (PLAYER 2)
+There are four abilities for each characters
+    *Basic attack
+    *2 Speciality attacks
+    *1 ultimate attack
 
-Relatively easy, you just wanna beat your opponent. 
-Attack damage are randomly generated with a the damage range of 1-10
+Pikachu attacks:
+    *basic attack (10)
+    *thunderbolt (3)
+    *volt tackle (2)
+    *thunderstorm (1)
 
-If player 1 wins then player 2 loses and vice versa.
+Charmander attacks:
+    *basic attack (10)
+    *blaze (3)
+    *ember (2)
+    *fire blast (1)
 
+Each skills/attacks damages are randomly generated
 
-UNFINISHED FUNCTIONALITY 
+If Pikachu wins, Charmander loses.
 
+If Charmander wins, Pikachu loses.
 
-BUGS
-not responsive when window size is manipulated (everything not in place + sizing)
+# Credits
+A lot of google searches!!!
+
+Skills pictures are from
+    https://game8.co/games/Pokemon-UNITE/archives/338028
+    https://game8.co/games/Pokemon-UNITE/archives/379178
+
+Characters images are from
+    https://www.vecteezy.com/vector-art/141925-set-of-pokemon-icons
+
+# Unfinished Functionality
+Did not get to finish the reset button which clears the scoreboard 
+
+# Bugs
+Currently, page is non-responsive on mobile app or when not played on full screen. Listed below are items that will be out of positioning if page are not optimized
+    *characters
+    *skills
+    *scoreboard
