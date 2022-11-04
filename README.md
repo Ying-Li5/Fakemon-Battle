@@ -51,3 +51,11 @@ Listed below are items that will be out of positioning if page are not optimized
 * Characters
 * Skills
 * Scoreboard
+
+# FUTURE ADDITIONS
+* Add health bar
+* Make game playable with CPU
+* Randomnize who goes first 
+* Add more characters
+* Create page where people can choose their character before entering into the battlefield 
+* Maybe add window-alert for a maximum game of 3 (e.g. if player 1 have 2 wins, and player 2 have 1 wins, then player 1 wins [total of 3 games])
