@@ -1,0 +1,34 @@
+@function invert($color, $amount: 100%, $isInversed) {
+    @if $isInversed {
+        $inverse: change-color($color, $hue: hue($color) + 180);
+        @return mix($inverse, $color, $amount);
+    }@else {
+        @error "property cannot be double inversed";
+    }
+  }
+
+@function darken($color, $isDarker) {
+    @if $isDarker {
+        $darken: change-color($color, $hue: hue($color) - 180);
+        @return mix($darken, $color);
+    }@else {
+        $darken: change-color($color, $hue: hue($color) - 90);
+        @return mix($darken, $color);
+    }
+  }
+
+@mixin scoreboard-styling {
+    font-weight: $base-weight;
+    border-bottom: $box-border;
+}
+
+@mixin scoreboard-info {
+    padding: 1%;
+    font-size: 150%;
+    text-align: $base-text;
+}
+
+@mixin skills-styling {
+    width: 50%;
+    height: 50%;
+}

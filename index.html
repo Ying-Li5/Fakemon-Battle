@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fakèmon Battle</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./sass/style.css">
     <script src="./script.js"></script>
   </head>
 
@@ -33,25 +33,25 @@
             <div class="p-basic">
                 <button type="button" class="p-attack" value="p-counter" onclick="pikachuAttack('p-counter', 'pikachu', 'basic-pikachu')">
                     <img src="./assests/basic-attack.png" alt="basic-attack" class="basic-attack">
-                    <div id="p-counter">10</div></button>
+                    <h3 id="p-counter">10</h3></button>
             </div>
             
             <div class="p-thunderbolt">
                 <button type="button" class="thunderbolt" value="thunderbolt-counter" onclick="pikachuAttack('thunderbolt-counter', 'pikachu', 'thunderbolt')">
                     <img src="./assests/thunderbolt-ability.png" alt="thunderbolt-attack" class="thunderbolt-ability">
-                    <div id="thunderbolt-counter">3</div></button>
+                    <h3 id="thunderbolt-counter">3</h3></button>
             </div>
 
             <div class="p-volt-tackle">
                 <button type="button" class="volt-tackle" value="volt-tackle-counter" onclick="pikachuAttack('volt-tackle-counter', 'pikachu', 'volt-tackle')">
                     <img src="./assests/volt-tackle-ability.png" alt="volt-tackle" class="volt-tackle-ability">
-                    <div id="volt-tackle-counter">2</div></button>
+                    <h3 id="volt-tackle-counter">2</h3></button>
             </div>
 
             <div class="p-thunderstorm">
                 <button type="button" class="thunderstorm" value="thunderstorm-counter" onclick="pikachuAttack('thunderstorm-counter', 'pikachu', 'thunderstorm')">
                     <img src="./assests/thunderstorm-ability.png" alt="thunderstorm-attack" class="thunderstorm-ult">
-                    <div id="thunderstorm-counter">1</div></button>
+                    <h3 id="thunderstorm-counter">1</h3></button>
             </div>
         </div>
     </nav>
@@ -69,35 +69,35 @@
             <div class="c-basic">
                 <button type="button" class="c-attack" value="c-counter" onclick="charmanderAttack('c-counter', 'charmander','basic-charmander')">
                     <img src="./assests/basic-attack.png" alt="basic-attack" class="basic-attack">
-                    <div id="c-counter">10</div></button>
+                    <h3 id="c-counter">10</h3></button>
             </div>
 
             <div class="c-blaze">
                 <button type="button" class="blaze" value="blaze-counter" onclick="charmanderAttack('blaze-counter', 'charmander','blaze')">
                     <img src="./assests/blaze-ability.png" alt="blaze-attack" class="blaze-ability">
-                    <div id="blaze-counter">3</div></button>
+                    <h3 id="blaze-counter">3</h3></button>
             </div>
 
             <div class="c-ember">
                 <button type="button" class="ember" value="ember-counter" onclick="charmanderAttack('ember-counter', 'charmander','ember')">
                     <img src="./assests/ember-ability.png" alt="ember-attack" class="ember-ability">
-                    <div id="ember-counter">2</div></button>
+                    <h3 id="ember-counter">2</h3></button>
             </div>
 
             <div class="c-fire-blast">
                 <button type="button" class="fire-blast" value="fire-blast-counter" onclick="charmanderAttack('fire-blast-counter', 'charmander','fire-blast')">
                     <img src="./assests/fire-blast-ability.png" alt="fire-blast" class="fire-blast-ult">
-                    <div id="fire-blast-counter">1</div></button>
+                    <h3 id="fire-blast-counter">1</h3></button>
             </div>
         </div>
     </aside>
 
     <footer>
         <div class="scoreboard">
-            <div class="scoreboard-name-one">Pikachu</div>
-            <div class="scoreboard-name-two">Charmander</div>
-            <div class="scoreboard-score-one" id="pikachu-score">0</div>
-            <div class="scoreboard-score-two" id="charmander-score">0</div>
+            <div class="scoreboard-name-one bolded">Pikachu</div>
+            <div class="scoreboard-name-two bolded">Charmander</div>
+            <div class="scoreboard-score-one italic" id="pikachu-score">0</div>
+            <div class="scoreboard-score-two italic" id="charmander-score">0</div>
         </div>
 
         <div class="reset-button">

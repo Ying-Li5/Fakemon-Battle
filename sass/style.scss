@@ -1,0 +1,165 @@
+@import "config";
+@import "utilites";
+@import "boxesConfig";
+
+body {
+    font-family: $base-font;
+}
+
+h1 {
+    text-align: $base-text;
+}
+
+/* SECTION */
+.battle-background {
+    display: $base-display;
+    margin-right: $base-marigin;
+    margin-left: $base-marigin;
+    width: 75%;
+    z-index: $base-index;
+} 
+
+.pikachu-image-div{
+    width: 150px;
+}
+
+.charmander{
+    display: $base-display;
+    margin-top: -470px;
+    margin-left: 1150px;
+    object-fit: cover;
+}
+
+.pikachu {
+    display: $base-display;
+    margin-top: 20px;
+    margin-left: 620px;
+}
+.pikachu-stats {
+    li {
+        list-style: $box-list;
+    }
+    h3 {
+        color: invert(#880808, 100%, true);
+    }
+    div {
+        color: #880808;
+    }
+}
+
+.charmander-stats {
+    li {
+        list-style: $box-list;
+    }
+    h3 {
+        color: darken(#00008B, true);
+        
+    }
+    div {
+        color: #00008B;
+    }
+}
+
+/* NAV */
+.pikachu-box {
+    display: grid;
+    border: $box-border;
+    width: 10%;
+    justify-content: $box-content;
+    margin-top: -25%;
+    margin-left: 1%;
+    padding-bottom: 1%;
+
+    h3 { 
+        color:#880808;
+    }
+}
+
+.p-attack, .thunderbolt, .volt-tackle, .thunderstorm {
+    display: $base-display;
+    justify-content: $box-content;
+    background-color: $base-color;
+    border: $base-border;
+}
+
+.p-attack:hover, .thunderbolt:hover, .volt-tackle:hover, .thunderstorm:hover {
+    background-color: $box-hover;
+}
+
+/* ASIDE */
+.charmander-box {
+    display: grid;
+    border: $box-border;
+    width: 10%;
+    justify-content: $box-content;
+    margin-top: -28%;
+    margin-left: 89%;
+    padding-bottom: 1%;
+
+    h3 { 
+        color: #00008B;
+    }
+}
+
+.c-attack, .blaze, .ember, .fire-blast {
+    display: $base-display;
+    justify-content: $box-content;
+    background-color: $base-color;
+    border: $base-border;
+}
+
+.c-attack:hover, .blaze:hover, .ember:hover, .fire-blast:hover {
+    background-color: $box-hover;
+}
+
+/* ASIDE AND NAV*/
+.basic-attack, .thunderbolt-ability, .volt-tackle-ability, .thunderstorm-ult, .blaze-ability, .ember-ability, .fire-blast-ult {
+    @include skills-styling;
+}
+
+/* FOOTER */
+
+.scoreboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    margin-right: $base-marigin;
+    margin-left: $base-marigin;
+    margin-top: 5%;
+    border: $box-border;
+    padding: 5px;
+}
+
+.scoreboard-name-one {
+    color: invert(#880808, 100%, true);
+    @include scoreboard-styling;
+}
+
+.scoreboard-name-two {
+    color: darken(#00008B, true);
+    @include scoreboard-styling;
+}
+
+
+.scoreboard-name-one, .scoreboard-name-two {
+    @include scoreboard-info;
+    
+    &.bolded {
+        font-weight: bolder;
+    }
+}
+
+.scoreboard-score-one, .scoreboard-score-two {
+    @include scoreboard-info;
+
+    &.italic {
+        font-weight: 200;
+        font-style: italic;
+    }
+}
+
+.reset-button {
+    display: $base-display;
+    margin-top: -4%;
+    margin-left: 71%;
+}

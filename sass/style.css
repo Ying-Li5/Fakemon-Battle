@@ -1,0 +1,159 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* SECTION */
+.battle-background {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  width: 75%;
+  z-index: -1;
+}
+
+.pikachu-image-div {
+  width: 150px;
+}
+
+.charmander {
+  display: flex;
+  margin-top: -470px;
+  margin-left: 1150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.pikachu {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 620px;
+}
+
+.pikachu-stats li {
+  list-style: none;
+}
+.pikachu-stats h3 {
+  color: #088888;
+}
+.pikachu-stats div {
+  color: #880808;
+}
+
+.charmander-stats li {
+  list-style: none;
+}
+.charmander-stats h3 {
+  color: #464646;
+}
+.charmander-stats div {
+  color: #00008B;
+}
+
+/* NAV */
+.pikachu-box {
+  display: grid;
+  border: 1px solid #ddd;
+  width: 10%;
+  justify-content: center;
+  margin-top: -25%;
+  margin-left: 1%;
+  padding-bottom: 1%;
+}
+.pikachu-box h3 {
+  color: #880808;
+}
+
+.p-attack, .thunderbolt, .volt-tackle, .thunderstorm {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border: none;
+}
+
+.p-attack:hover, .thunderbolt:hover, .volt-tackle:hover, .thunderstorm:hover {
+  background-color: #D3D3D3;
+}
+
+/* ASIDE */
+.charmander-box {
+  display: grid;
+  border: 1px solid #ddd;
+  width: 10%;
+  justify-content: center;
+  margin-top: -28%;
+  margin-left: 89%;
+  padding-bottom: 1%;
+}
+.charmander-box h3 {
+  color: #00008B;
+}
+
+.c-attack, .blaze, .ember, .fire-blast {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border: none;
+}
+
+.c-attack:hover, .blaze:hover, .ember:hover, .fire-blast:hover {
+  background-color: #D3D3D3;
+}
+
+/* ASIDE AND NAV*/
+.basic-attack, .thunderbolt-ability, .volt-tackle-ability, .thunderstorm-ult, .blaze-ability, .ember-ability, .fire-blast-ult {
+  width: 50%;
+  height: 50%;
+}
+
+/* FOOTER */
+.scoreboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5%;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.scoreboard-name-one {
+  color: #088888;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+.scoreboard-name-two {
+  color: #464646;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+.scoreboard-name-one, .scoreboard-name-two {
+  padding: 1%;
+  font-size: 150%;
+  text-align: center;
+}
+.scoreboard-name-one.bolded, .scoreboard-name-two.bolded {
+  font-weight: bolder;
+}
+
+.scoreboard-score-one, .scoreboard-score-two {
+  padding: 1%;
+  font-size: 150%;
+  text-align: center;
+}
+.scoreboard-score-one.italic, .scoreboard-score-two.italic {
+  font-weight: 200;
+  font-style: italic;
+}
+
+.reset-button {
+  display: flex;
+  margin-top: -4%;
+  margin-left: 71%;
+}/*# sourceMappingURL=style.css.map */
